@@ -15,24 +15,26 @@ public class SimpleBot {
     }
 
     static void greet(String assistantName, String birthYear) {
-        System.out.println("Hello! My name is " + assistantName + ".");
-        System.out.println("I was created in " + birthYear + ".");
+        System.out.printf("Hello! My name is %s.\n", assistantName);
+        System.out.printf("I was created in %s.\n", birthYear);
         System.out.println("Please, remind me your name.");
     }
 
     static void remindName() {
         String name = scanner.nextLine();
-        System.out.println("What a great name you have, " + name + "!");
+        System.out.printf("What a great name you have, %s!\n", name);
     }
 
     static void guessAge() {
-        System.out.println("Let me guess your age.");
-        System.out.println("Enter remainders of dividing your age by 3, 5 and 7.");
+        System.out.println(
+            "Let me guess your age.\n" +
+            "Enter remainders of dividing your age by 3, 5 and 7.");
+
         int rem3 = scanner.nextInt();
         int rem5 = scanner.nextInt();
         int rem7 = scanner.nextInt();
         int age = (rem3 * 70 + rem5 * 21 + rem7 * 15) % 105;
-        System.out.println("Your age is " + age + "; that's a good time to start programming!");
+        System.out.printf("Your age is %d; that's a good time to start programming!\n", age);
     }
 
     static void count() {
