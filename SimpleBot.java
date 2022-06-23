@@ -44,18 +44,25 @@ public class SimpleBot {
     }
 
     static void test() {
-        System.out.println("Let's test your programming knowledge.");
-        System.out.println("Which of the following categories DOES NOT fall under the imperative paradigm?");
-        System.out.println("1. Procedural");
-        System.out.println("2. Functional");
-        System.out.println("3. Object Oriented");
-        System.out.println("4. Parallel Processing");
-        int answer = 2;
+        System.out.println(
+            "Let's test your programming knowledge.\n" +
+            "Which of the following categories DOES NOT fall under the imperative paradigm?");
+        System.out.println(
+            "1. Procedural\n" +
+            "2. Functional\n" +
+            "3. Object Oriented\n" +
+            "4. Parallel Processing");
+
+        int answer = 2; // 2. Functional is the correct answer
         int guess = scanner.nextInt();
         
-        for (; answer != guess;) {
-            System.out.println("Please, try again.");
-            guess = scanner.nextInt();
+        while (true) {
+            if (answer == guess) {
+                break;
+            } else {
+                System.out.println("Please, try again.\n");
+                guess = scanner.nextInt();
+            }
         }
     }
 
